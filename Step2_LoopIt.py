@@ -25,14 +25,24 @@ win = visual.Window(fullscr=True, allowGUI=False, color='white', unit='height')
 #%% your loop here
 # start by copying your one trial here, then identify what needs to be
 # changed on every trial.  Likely your stimuli, but you might want to change a few things
+myText1 =visual.TextStim(win,text='t', pos=(0,0),color='black')
+myRatingScale = visual.RatingScale(win,low=1, high=7, marker='triangle',
+    tickMarks=[1,2,3,4,5,6,7],markerStart=None,markerColor='lightgrey')
+thisRating = myRatingScale.getRating()
 
 
 # make a list or a pd.DataFrame that contains trial-specific info (stimulus, etc)
 # e.g. stim = ['1.jpg','2.jpg','3.jpg']
-
+stim = ['happy' , 'sad', 'angry']
 
 # make your loop
-for t in ... :
+for t in stim:
+    thisStimName=stim[t]
+    thisStim=visual.TextStim(win,text=thisStimName, pos=(0,0),color='black')
+    myRatingScale
+    thisStimName.draw()
+    win.flip()
+    
     
     # include your trial code in your loop but replace anything that should 
     # change on each trial with a variable that uses your iterater
@@ -41,6 +51,7 @@ for t in ... :
     
     # if you're recording responses, be sure to store your responses in a list
     # or DataFrame which also uses your iterater!
+
 
 
 #%% Required clean up

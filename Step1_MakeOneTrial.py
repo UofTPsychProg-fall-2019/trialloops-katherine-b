@@ -28,10 +28,16 @@ win = visual.Window(fullscr=True, allowGUI=False, color='white', unit='height')
 # if you're stuck you can use the responseExercise.py answer as a starting point 
 
 # maybe start by making stimulus objects (e.g. myPic = visual.ImageStim(...))  
+myText1 =visual.TextStim(win,text='happy', pos=(0,0),color='black')
+
+
 
 # then draw all stimuli
+myText1.draw()
+
 
 # then flip your window
+win.flip()
 
 # then record your responses
 
